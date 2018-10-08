@@ -8,10 +8,6 @@ import lejos.hardware.sensor.EV3TouchSensor;
 import lejos.hardware.sensor.SensorMode;
 import lejos.hardware.port.MotorPort;
 import lejos.hardware.port.SensorPort;
-import lejos.robotics.RegulatedMotor;
-import lejos.utility.Delay;
-import lejos.utility.Timer;
-
 
 // ---- Lab1 ---- Ben Trybulski (bentry), Johanns Tedla (pid) 
 //
@@ -51,7 +47,6 @@ public class Lab1FunctionalRunner {
 		mA.close();
 		mB.close();
 		Sound.beep();
-		Delay.msDelay(3000);
 	}
 
 	public static void obj2() {
@@ -69,14 +64,12 @@ public class Lab1FunctionalRunner {
 			mA.backward();
 			mB.backward();
 			mA.endSynchronization();
-			Delay.msDelay(750);
 			
 		} while (sampleSonic[0] > 0.5);
 		ultraSensor.close();
 		mA.close();
 		mB.close();
 		Sound.beep();
-		Delay.msDelay(3000);
 	}
 	
 	public static void obj3() {
@@ -94,7 +87,6 @@ public class Lab1FunctionalRunner {
 			mA.backward();
 			mB.backward();
 			mA.endSynchronization();
-			Delay.msDelay(750);
 		} while (sample[0] == 0);
 		
 		// 50cm = 2.8420525552124167 rotations forwards
@@ -118,7 +110,6 @@ public class Lab1FunctionalRunner {
 		EV3LargeRegulatedMotor mB = new EV3LargeRegulatedMotor(MotorPort.D);
 		int motorA[] = {0,360,720,1080,360,0,180,0};
 		int motorB[] = {0,360,720,1080,360,0,180,0};
-		Delay.msDelay(1000);
 		mA.setSpeed(720); mB.setSpeed(720);
 		for (int i = 0; i < motorA.length; ++i) {
 			mA.startSynchronization();
@@ -133,13 +124,10 @@ public class Lab1FunctionalRunner {
 		System.out.println("Running lab1...");
 		Button.waitForAnyPress();
 		obj1();
-		Delay.msDelay(3000);
 		System.out.println("Obj1 completed");
 		obj2();
-		Delay.msDelay(3000);
 		System.out.println("Obj2 completed");
 		obj3();
-		Delay.msDelay(3000);
 		System.out.println("Obj3 completed");
 		System.out.println("...finished lab1");
 	}

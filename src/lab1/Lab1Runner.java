@@ -8,10 +8,7 @@ import lejos.hardware.sensor.EV3TouchSensor;
 import lejos.hardware.sensor.SensorMode;
 import lejos.hardware.port.MotorPort;
 import lejos.hardware.port.SensorPort;
-import lejos.robotics.RegulatedMotor;
 import lejos.utility.Delay;
-import lejos.utility.Timer;
-
 
 // ---- Lab1 ---- Ben Trybulski (bentry), Johanns Tedla (pid) 
 //
