@@ -10,7 +10,7 @@ import lejos.hardware.port.MotorPort;
 import lejos.hardware.port.SensorPort;
 import lejos.utility.Delay;
 
-// ---- Lab1 ---- Ben Trybulski (bentry), Johanns Tedla (pid) 
+// ---- Lab1 ---- Ben Trybulski (bentry), Yohanns Tedla (sereke) 
 //
 // Objective 1 (Odometry): 
 //   Upon pressing center gray button, the robot moves forward for 1.2m, stops, then beeps.
